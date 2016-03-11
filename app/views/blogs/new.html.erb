@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="profile_form">
+       <%= simple_form_for(@post, :url => create_post_path, :method => :post) do |f| %>
+       <%= f.error_notification %>
+       <div class="form-inputs">
+          <%= f.input :title %>
+          <%= f.input :content %>
+       
+       </div>
+        <div class="form-inputs" style="
+    margin-right: 10%;
+">
+          <%= f.input :image, as: :file , input_html: { class: 'special' },wrapper: false%>
+       
+       </div>
+       <br><br>
+        <div class="form-actions" style="
+    margin-left: -3%;
+    margin-right: 3%;
+">
+          <%= f.button :submit %>
+          
+        </div>
+        <br><br>      
+      <% end %>
+    </div>
+  </div>
+</div>
+<style>
+.special{
+	margin-right: 10%;
+}
+</style>

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="profile_form">
+      <%= simple_form_for(@profile) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs">
+          <div class="col-sm-6">
+            <%= f.input :first_name %>
+            <%= f.input :last_name %>
+            <%= f.input :city %>
+            <%= f.input :state %>
+            <%= f.input :industry %>
+            <%= f.input :experience %>
+            <%= f.input :coach_type %>
+            <%= f.input :rating %>
+            <%= f.label "Leadership" %>
+            <%= f.check_box :leadership, {}, "leadership", "" %>
+            <%= f.label "Wellbeing" %>
+            <%= f.check_box :wellbeing, {}, "wellbeing", "" %>
+            <%= f.label "Management" %>
+            <%= f.check_box :management, {}, "management", "" %>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :price_low %>
+            <%= f.input :price_high %>
+            <%= f.input :language %>
+            <%= f.input :certification %>
+            <%= f.input :skills %>
+            <%= f.input :email %>
+            <%= f.input :bio %>
+          </div>
+        </div>
+        <br><br>
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>
+        <br><br>      
+      <% end %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,59 @@
+
+
+@import 'css/bootstrap.min.css';
+@import "custom";
+@import "contacts";
+@import "profiles";
+@import "events";
+
+
+
+
+
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+$white: #FFFFFF;
+
+
+
+.date{
+	font-size: .9em;
+	margin: 0;
+}
+#post-show-content{
+	header{
+	text-align: center;
+	.date{
+	font-size: .9em;
+	color: $light;
+	margin: 0;
+	}
+	h1{
+	margin: 0;
+	}
+	}
+	hr{
+	margin: 2em auto;
+	}
+}
+#share-box{
+	text-align: center;
+	p{
+	padding: 0 0 1em 0;
+	margin: 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $dark;
+	font-size: .8em;
+	}
+	i{
+	color: $dark;
+	padding: 1em 1.5em;
+	&:hover{
+	color: $highlight;
+	cursor: pointer;
+	}
+	}
+}

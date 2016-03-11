@@ -1,0 +1,109 @@
+.profile_form .simple_form .form-control {
+    background: none repeat scroll 0 0 #eeeded;
+    border: 1px solid #ad9d9d;
+    border-radius: 4px;
+    color: #2d2525;
+    padding: 3px 4px;
+    width: 90%;
+}
+
+.profile_form .simple_form .form-actions input {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    padding: 3px 4px;
+    width: 90%;
+    line-height: 2em;
+    margin-left: 3%;
+}
+
+.profile_container {
+
+}
+
+
+
+.pic_with_name {
+  padding: 20px;
+}
+
+
+
+.profile_videos {
+  max-width: 1200px; 
+  min-width: 1000px; 
+
+  // padding: none;
+  .intro_video {
+    // max-width: 95%;
+    // margin-left: 5px;
+    // float:left;
+  }
+  .what_sets_you_apart_video {
+    // float:right;
+    // margin-left: 5px;
+    max-width: 95%
+  }
+  p {
+    font-weight: 700;
+  }
+}
+.profile_name {
+
+}
+.profile_info {
+  h3 {
+    text-align: left;
+    margin-top: 0;
+  }
+  span {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f7921e;
+  }
+}
+.profile_links {
+  h4 {
+    display: inline;
+    text-align: right;
+    float: right;
+    border: 2px solid #f7921e;
+    margin: 4px;
+    padding: 5px 30px;
+      a {
+        color: black;
+      }
+  }
+}
+#resume_link {
+  border: 2px solid #d3d3d3;
+}
+#notice {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  
+}
+.box_for_info {
+  padding: 20px;
+}
+.gray_background {
+  background: #ececec;
+  border: 1px solid #dfdfdf;
+  padding: 5px;
+}
+.profile_skills {
+  margin: 0;
+  h2 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f7921e;
+    margin-right: 25px;
+  }
+}
+
+
+
+
+
+// div {
+//   border: 1px solid blue;
+// }

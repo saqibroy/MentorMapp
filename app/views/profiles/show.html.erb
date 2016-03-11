@@ -1,0 +1,120 @@
+
+
+<div class="profile_container">
+
+<!-- Pic and contact info -->
+  <div class="container">
+    <div class="row">
+      <div class="pic_with_name col-sm-3">
+        <%= link_to image_tag("https://rimbizblog.files.wordpress.com/2015/03/asian-guy-looking-down-at-smartphone-square.jpg", :height => 250, :width => 250, :alt => "Profile Picture", :class => "img-responsive") %>
+      </div> 
+      <div class="col-sm-9 box_for_info">
+        <div class="row">
+          <div class="profile_info col-sm-4">
+            <h3><%= @profile.first_name  %> <%= @profile.last_name  %></h3>
+            <h5><span><%= @profile.city %></span>, <%= @profile.state %></h5>
+          </div>
+          <div class="col-sm-2"></div>
+          <div class="profile_links col-sm-6">
+            <h4><%= link_to("Resume", "#") %></h4>
+            <h4 id="resume_link"><%= link_to("Contact", "#") %></h4>
+          </div>
+        </div>
+        <h3> Bio</h3>
+        <%= @profile.bio %><br><br>
+        <h4><span class="gray_background"><%= @profile.coach_type %></span></h4>
+      </div>
+    </div>
+  </div>
+
+<!-- Profile Videos -->
+  <div class="profile_videos container">
+    <div class="row">
+      <div class="col-sm-6 intro_video">
+        <p>Introduction</p>
+        <iframe width="475" height="290" src="https://www.youtube.com/embed/yyb1wImU-4I" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-6 what_sets_you_apart_video">
+        <p>What sets you apart from other coaches?</p>
+        <iframe width="475" height="290" src="https://www.youtube.com/embed/p_t9NmZNhIE" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+<!-- Bio -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 profile_skills">
+        <h2>Skills</h2>
+        <% skills = @profile.skills.split(' ')%>
+        <h3><% skills.each do |skill| %></h3>
+        <span class="gray_background"><%= skill %></span>
+        <% end %>
+        <br><br><br>
+        <h2>Reviews</h2>
+
+      </div>
+      <div class="col-sm-6 profile_skills">
+        <h2>Details</h2>
+          <div class="row"> 
+            <div class="col-sm-6">
+              <h4>Coach Type </h4>
+            </div>
+            <div class="col-sm-6">
+              <h5><%= @profile.coach_type  %></h5>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-sm-6">
+              <h4>Rating </h4>
+            </div>
+            <div class="col-sm-6">
+              <h5><%= @profile.rating %></h5>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-sm-6">
+              <h4>Price </h4>
+            </div>
+            <div class="col-sm-6">
+              <h5>$<%= @profile.price_low %> - $<%= @profile.price_high %></h5>
+            </div>
+          </div>  
+          <div class="row"> 
+            <div class="col-sm-6">
+              <h4>Industry background </h4>
+            </div>
+            <div class="col-sm-6">
+              <h5><%= @profile.industry %></h5>
+            </div>
+          </div> 
+          <div class="row"> 
+            <div class="col-sm-6">
+              <h4>Languages </h4>
+            </div>
+            <div class="col-sm-6">
+              <h5><%= @profile.language %></h5>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-sm-6">
+              <h4>Certification </h4>
+            </div>
+            <div class="col-sm-6">
+              <h5><%= @profile.certification %></h5>
+            </div>
+          </div> 
+
+
+      </div>
+    </div>
+  </div>
+<!--     <div class="container">
+    <h2>Skills</h2>
+    <%= @profile.skills  %>
+  </div> -->
+</div>
+
+<div class="container">
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
+</div>
