@@ -1,45 +1,59 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
       xmlns="http://www.w3.org/1999/html">
-      <center>
-<div class="l-primary">
-  <div class="container" id="contact_us_container">
-    <h1 id="page_title">Blogs</h1>
-
-    <div class="row blog_div">
-      <div class="col-sm-8" id="mentor_description" style="
-    margin-left: 15%;
-">
-      
-        <article id="1">
-          <a href="<%= show_post_path(id: @post.id) %>"><h3 class="entry-title" itemprop="headline"><%=@post.title %></h3></a>
-          <p>
-            <a href="<%= show_post_path(id: @post.id) %>"><%= image_tag(@post.image.url(:medium), alt: "post.title", class: "img-responsive" ) %></a>
-          </p>
-
-          <div id="share-box">
-        <a data-share="facebook" data-title="Check this, yo" data-link="https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble" data-description="Nice, very nice" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble/" target="_blank"><i class="fa fa-facebook"></i> Facebook |</a>
-            <a data-share="twitter" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2" data-hashtags="cowabunga,gnarly" href="https://www.twitter.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2/" target="_blank"><i class="fa fa-twitter"></i> Twitter |</a>
-            <a data-share="googleplus" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2" href="https://plus.google.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2/" target="_blank"><i class="fa fa-google-plus"></i> Google Plus</a>
-        </div>
-
-          
-          <i class="fa fa-eye"><%= @post.number_of_views %></i>
-          <p class="date"><%= @post.created_at.strftime("%A, %B %d") %></p>
-        </article>
-
+      <div class="container " >
+        
+      </div>
+      <div class="row " id="contact_us_container" style="
+    margin-left: 5%;" >
+        <div class="col-sm-11 blog_div" >
+        <a href="<%= show_post_path(id: @post.id) %>"><h2 class="entry-title" itemprop="headline"><%=@post.title %></h2></a>
+       
+        <h3>by <b><%= @post.user.email %></b></h3>
         
 
-         <pre style="
-    
-    text-align-last: left;
-"><%= @post.content %></pre>
-       <hr/>
+          <p class="date"><%= @post.created_at.strftime("%A, %B %d") %> <b><i class="fa fa-eye"><%= @post.number_of_views %></i></b></p> 
+          
+        </div>
       </div>
-      
+      <div class="row" style="
+    margin-left: 5%;">
+        <div class="col-md-7 blog_div">
+        <br>
+        <div id="share-box">
+        <a data-share="facebook" data-title="Check this, yo" data-link="https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble" data-description="Nice, very nice" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a data-share="twitter" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2" data-hashtags="cowabunga,gnarly" href="https://www.twitter.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a data-share="googleplus" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2" href="https://plus.google.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2/" target="_blank"><i class="fa fa-google-plus"></i></a>
+        </div>
+            <div style="
+    margin-left: 30%;">
+    <br>
+    <%= image_tag(@post.image.url(:medium), alt: "post.title" ) %>
     </div>
-  </div>
-</div>
-</center>
+    <br>
+            <pre style="
+    
+    text-align-last: left ; margin-left: 2%;
+"><%= @post.content %></pre>
+        
+          
+        </div>
+        <div class="col-md-4 blog_div" style="
+    margin-left: 1%;">
+        <h3>Most Stories</h3>
+        <% @posts.each do |post| %>
+        <br>
+        <a href="<%= show_post_path(id: post.id) %>"><h4><%= post.title %></h4></a>
+        <% end %>
+
+          
+        </div>
+      </div>
+    
+
+
+
+
+      
 <style>
     body {
         background-image: none;

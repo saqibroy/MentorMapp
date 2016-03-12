@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
 	def show
 		@post.number_of_views= @post.number_of_views + 1
 		@post.save
+		@posts=Post.all.limit(10)
 	end
 	private
 	def post_params

@@ -12,6 +12,7 @@
       <% @posts.each do |post| %>
         <article id="1">
           <a href="<%= show_post_path(id: post.id) %>"><h3 class="entry-title" itemprop="headline"><%=post.title %></h3></a>
+          <p>By: <%=post.user.email %></p>
           <p>
             <a href="<%= show_post_path(id: post.id) %>"><%= image_tag(post.image.url(:medium), alt: "post.title", class: "img-responsive" ) %></a>
           </p>
