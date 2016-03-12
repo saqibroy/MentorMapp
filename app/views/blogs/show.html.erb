@@ -10,7 +10,7 @@
         <h2><%=@post.title %></h2>
         <h3><%=@post.sub_title %></h3>
        
-        <h3>by <b><%= @post.user.name %></b>,Job title <b><%= @post.user.job_title %></b></h3>
+        <h3>by <b><%= @post.user.name %></b>, Job title <b><%= @post.user.job_title %></b></h3>
         
 
           <p class="date"><%= @post.created_at.strftime("%A, %B %d") %> <b><i class="fa fa-eye"><%= @post.number_of_views %></i></b></p> 
@@ -40,7 +40,7 @@
         </div>
         <div class="col-md-4 blog_div" style="
     margin-left: 1%;">
-        <h3>Most Stories</h3>
+        <h3>More Stories</h3>
         <% @posts.each do |post| %>
         <br>
         <a href="<%= show_post_path(id: post.id) %>"><h4><%= post.title %></h4></a>
@@ -58,6 +58,7 @@
 <style>
     body {
         background-image: none;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     .img-responsive{
 width:100%;
