@@ -6,9 +6,11 @@
       <div class="row " id="contact_us_container" style="
     margin-left: 5%;" >
         <div class="col-sm-11 blog_div" >
-        <a href="<%= show_post_path(id: @post.id) %>"><h2 class="entry-title" itemprop="headline"><%=@post.title %></h2></a>
+        
+        <h2><%=@post.title %></h2>
+        <h3><%=@post.sub_title %></h3>
        
-        <h3>by <b><%= @post.user.email %></b></h3>
+        <h3>by <b><%= @post.user.name %></b>,Job title <b><%= @post.user.job_title %></b></h3>
         
 
           <p class="date"><%= @post.created_at.strftime("%A, %B %d") %> <b><i class="fa fa-eye"><%= @post.number_of_views %></i></b></p> 
@@ -16,7 +18,7 @@
         </div>
       </div>
       <div class="row" style="
-    margin-left: 5%;">
+    margin-left: 2%;">
         <div class="col-md-7 blog_div">
         <br>
         <div id="share-box">
@@ -25,15 +27,14 @@
             <a data-share="googleplus" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2" href="https://plus.google.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2/" target="_blank"><i class="fa fa-google-plus"></i></a>
         </div>
             <div style="
-    margin-left: 30%;">
+    margin-left: 2%;">
     <br>
     <%= image_tag(@post.image.url(:medium), alt: "post.title" ) %>
     </div>
     <br>
             
     
-    text-align-last: left ; margin-left: 2%;
-"><%= @post.content %>
+   <%= @post.content %>
         
           
         </div>

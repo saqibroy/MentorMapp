@@ -4,14 +4,15 @@
        <%= simple_form_for(@post, :url => create_post_path, :method => :post) do |f| %>
        <%= f.error_notification %>
        <div class="form-inputs">
-          <%= f.input :title %>
-          <%= f.input :content %>
+          <%= f.input :title , required: true %>
+          <%= f.input :sub_title , required: true %>
+          <%= f.input :content , required: true %>
        
        </div>
         <div class="form-inputs" style="
     margin-right: 10%;
 ">
-          <%= f.input :image, as: :file , input_html: { class: 'special' },wrapper: false%>
+          <%= f.input :image, as: :file , input_html: { class: 'special' },wrapper: false, required: true %>
        
        </div>
        <br><br>

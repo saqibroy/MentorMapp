@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
   resources :demos
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
   resources :events
   resources :profiles
   resources :contacts, only: [:new, :create]
