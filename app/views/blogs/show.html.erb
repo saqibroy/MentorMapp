@@ -4,7 +4,7 @@
         
       </div>
       <div class="row " id="contact_us_container" style="
-    margin-left: 5%;" >
+    margin-left: 2%;" >
         <div class="col-sm-11 blog_div" >
         
         <h2><%=@post.title %></h2>
@@ -21,25 +21,35 @@
     margin-left: 2%;">
         <div class="col-md-7 blog_div">
         <br>
-        <div id="share-box">
-        <a data-share="facebook" data-title="Check this, yo" data-link="https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble" data-description="Nice, very nice" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble/" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a data-share="twitter" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2" data-hashtags="cowabunga,gnarly" href="https://www.twitter.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2/" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a data-share="googleplus" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2" href="https://plus.google.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2/" target="_blank"><i class="fa fa-google-plus"></i></a>
+        <div >
+        <a data-share="facebook" data-title="Check this, yo" data-link="https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble" data-description="Nice, very nice" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/MentorMapp-739108312858052/?__mref=message_bubble/" target="_blank">Facebook|<i class="fa fa-facebook"></i></a>
+            <a data-share="twitter" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2" data-hashtags="cowabunga,gnarly" href="https://www.twitter.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FMentorMapp&h=sAQGqLRe2/" target="_blank"><i class="fa fa-twitter">Twitter|</i></a>
+            <a data-share="googleplus" data-title="Check this, yo" data-link="https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2" href="https://plus.google.com/share?url=https://l.facebook.com/l.php?u=https%3A%2F%2Fplus.google.com%2F114009613172000559059&h=sAQGqLRe2/" target="_blank"><i class="fa fa-google-plus">Google Plus|</i></a>
         </div>
-            <div style="
-    margin-left: 2%;">
-    <br>
-    <%= image_tag(@post.image.url(:medium), alt: "post.title" ) %>
-    </div>
+        <br>
+     
+    
+
+    <%= image_tag(@post.image.url(:medium), alt: "post.title", class: "img-responsive" ) %>
+    
     <br>
             
-    
+    <div style="">
+    <pre style="border: none;
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 14px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background: none;">
    <%= @post.content %>
-        
+   </pre>
+        </div>
           
         </div>
         <div class="col-md-4 blog_div" style="
-    margin-left: 1%;">
+    margin-left: .13%;">
         <h3>More Stories</h3>
         <% @posts.each do |post| %>
         <br>
@@ -61,7 +71,7 @@
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     .img-responsive{
-width:100%;
+width:80%;
 
     }
     </style>
